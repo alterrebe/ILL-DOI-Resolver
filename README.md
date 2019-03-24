@@ -7,12 +7,12 @@ This is a quick guide to help you add a DOI resolver to your ILLiad article requ
 - Retrieves the metadata associated with a DOI from doi.org, and automatically fills out an article request form with it.
 - Checks openaccessbutton.org for an open access copy of the material, and displays a link to it if one is available.
 
-
+You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.html>
 
 ## Setup Instructions
 
 1. Find the main directory for your ILLiad web pages. This is the directory that contains ILLiadMainMenu.html, ArticleRequest.html, etc.
-2. Create a folder called "js" in that directory, and save a copy of DOIResolver.js in that folder.
+2. Create a folder called "js" in that directory, and save a copy of [DOIResolver.js](https://github.com/austinfsmith/ILL-DOI-Resolver/blob/master/DOIResolver.js) in that folder.
 3. Open ArticleRequest.html, or any other form you'd like to add the resolver to. I strongly suggest saving a backup copy of this page before you make any changes, just in case.
 4. Add the following line to your file, below the `<head>` line but above the `</head>` line. If the file already contains `<script>` lines, place it immediately after those.
 ```
