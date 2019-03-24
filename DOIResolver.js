@@ -39,9 +39,9 @@ function autofillFields(responseText){
     citation_json.author.forEach( function(auth) {
       author_list.push(auth.given + " " + auth.family);
     })
-    authors = author_list.join(", ");
   }
-
+  authors = author_list.join(", ");
+  
   document.getElementById("PhotoJournalTitle").value = citation_json["container-title"] || null;
   document.getElementById("PhotoJournalVolume").value = citation_json.volume || null;
   document.getElementById("PhotoJournalIssue").value = citation_json.issue || null;
