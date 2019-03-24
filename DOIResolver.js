@@ -95,13 +95,13 @@ function checkOpenAccess(url){
 
 // If an OA link was found, display it.
 function displayOpenAccessLink(url){
-   oadiv = document.getElementById("openaccess");
+   oadiv = document.getElementById("openaccessdiv");
    oadiv.setAttribute("style", "display:block");
    oabtn = document.getElementById("openaccessbutton");
    oabtn.onclick = function(){ window.open(url,'_blank') }
 }
 
 function hideOpenAccessLink(){
-   oadiv = document.getElementById("openaccess");
+   oadiv = document.getElementById("openaccessdiv");
    oadiv.setAttribute("style", "display:none");
 }
