@@ -52,6 +52,8 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
 
 8. Save your changes and try it out! The Resolve DOI button should now be present & functional on your request form.
 
-## Other Uses
+The code provided here has minimal styling; if you've modified the CSS for your ILLiad web pages, you'll probably want to tweak this to match your existing styles.
 
-The javascript provided here is designed for use with the ILLiad request forms, but it should be easy to modify it for use with other types of forms. Please feel free to do so!
+
+Please let me know if you decide to use this, or if you have any questions for comments!
+
