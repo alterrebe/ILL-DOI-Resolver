@@ -9,9 +9,12 @@
 <label for "citation">
   <span>
     <b>DOI</b><br/>
-    <textarea type="text" id="DOI" name="DOI" rows="5" cols="50"></textarea><br/>
+    <textarea type="text" id="DOI" name="DOI" size="40"></textarea><br/>
     <button type="button" id="resolveDOI" onclick="resolveDOI()">Resolve DOI</button><br/>
     <span class="note" id="doierrormessage"></span>
+    <div id="openaccess" style="display:none">
+      <button type="button" id="openaccessbutton">View Open Access Version</button>
+      <span class="note">Open Access versions may be author drafts.</span>
     <label for="openaccesslink"></label>
     <a class="openaccesslink" id="openaccesslink" ></a>
   <span></br>
@@ -38,3 +41,4 @@
 <input id="ISSN" type="text" size="40" class="f-name" tabindex="10" ><br />
 </body>
 </html>
+http://dx.doi.org/10.1038/nphys1170
