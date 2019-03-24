@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>DOI Resolver</title>
+</head>
+<body>
+<script type="text/javascript" src="DOIResolver.js"></script></body>
+
+<label for "citation">
+  <span>
+    <b>DOI</b><br/>
+    <textarea type="text" id="DOI" name="DOI" rows="5" cols="50"></textarea><br/>
+    <button type="button" id="resolveDOI" onclick="resolveDOI()">Resolve DOI</button><br/>
+    <span class="note" id="doierrormessage"></span>
+    <label for="openaccesslink"></label>
+    <a class="openaccesslink" id="openaccesslink" ></a>
+  <span></br>
+</label></br>
+
+<div id="errorText"></div>
+<label for="PhotoJournalTitle"><b>Journal or Book Title</b></label><br />
+<input id="PhotoJournalTitle" type="text" size="40" class="f-name" tabindex="2" ><br />
+<label for="PhotoJournalVolume"><b>Volume</b></label><br />
+<input id="PhotoJournalVolume" type="text" size="40" class="f-name" tabindex="3" ><br />
+<label for="PhotoJournalIssue"><b>Issue</b></label><br />
+<input id="PhotoJournalIssue" type="text" size="40" class="f-name" tabindex="4" ><br />
+<label for="PhotoJournalYear"><b>Year</b></label><br />
+<input id="PhotoJournalYear" type="text" size="40" class="f-name" tabindex="5" ><br />
+<label for="PhotoJournalMonth"><b>Month</b></label><br />
+<input id="PhotoJournalMonth" type="text" size="40" class="f-name" tabindex="6" ><br />
+<label for="PhotoJournalInclusivePages"><b>Pages</b></label><br />
+<input id="PhotoJournalInclusivePages" type="text" size="40" class="f-name" tabindex="7" ><br />
+<label for="PhotoArticleAuthor"><b>Author</b></label><br />
+<input id="PhotoArticleAuthor" type="text" size="40" class="f-name" tabindex="8" ><br />
+<label for="PhotoArticleTitle"><b>Article or Chapter Title</b></label><br />
+<input id="PhotoArticleTitle" type="text" size="40" class="f-name" tabindex="9" ><br />
+<label for="ISSN"><b>ISSN</b></label><br />
+<input id="ISSN" type="text" size="40" class="f-name" tabindex="10" ><br />
+</body>
+</html>
