@@ -4,6 +4,8 @@ This is a quick guide to help you add a DOI resolver to your ILLiad article requ
 
 ## What does it do?
 
+![demo gif](DOIResolverDemo.gif)
+
 - Retrieves the metadata associated with a DOI from doi.org, and automatically fills out an article request form with it.
 - Checks openaccessbutton.org for an open access copy of the material, and displays a link to it if one is available.
 
