@@ -50,7 +50,7 @@ function autofillFields(responseText){
   document.getElementById("PhotoJournalInclusivePages").value = citation_json.page || null;
   document.getElementById("PhotoArticleAuthor").value = authors || null;
   document.getElementById("PhotoArticleTitle").value = citation_json.title || null;
-  document.getElementById("ISSN").value = citation_json.ISSN[0] || cotation_json.ISBNN[0] || null;
+  document.getElementById("ISSN").value = citation_json.ISSN[0] || citation_json.ISBN[0] || null;
 }
 
 function checkOpenAccess(url){
