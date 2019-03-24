@@ -42,6 +42,15 @@ function autofillFields(responseText){
   }
   authors = author_list.join(", ");
   
+  if (citation_json.ISSN){
+    isxn = citation_json.ISSN[0];
+  } elseif (citation_json.ISBN){
+    isxn = citation_json.ISBN[0];
+  } else {
+    isxn = "";
+  }
+    
+  
   document.getElementById("PhotoJournalTitle").value = citation_json["container-title"] || null;
   document.getElementById("PhotoJournalVolume").value = citation_json.volume || null;
   document.getElementById("PhotoJournalIssue").value = citation_json.issue || null;
@@ -50,7 +59,7 @@ function autofillFields(responseText){
   document.getElementById("PhotoJournalInclusivePages").value = citation_json.page || null;
   document.getElementById("PhotoArticleAuthor").value = authors || null;
   document.getElementById("PhotoArticleTitle").value = citation_json.title || null;
-  document.getElementById("ISSN").value = citation_json.ISSN[0] || citation_json.ISBN[0] || null;
+  document.getElementById("ISSN").value = isxn || null;
 }
 
 function checkOpenAccess(url){
