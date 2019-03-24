@@ -34,17 +34,17 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
 
 ```
 <label for="DOI">
-	<span class="field">
-		<span class="valid"><strong>DOI</strong></span><br />
-		<span class="note">Have the DOI? Try resolving it to auto populate the form.</span>
-	</span></br>
-	<input id="DOI" name="DOI" type="text" size="20" class="f-name" tabindex="1" value="">
-	<button type="button" id="doibutton" onclick="resolveDOI()">Resolve DOI</button><br />
-	<span class="note" id="doierrormessage"></span>
-	<div id="openaccessdiv" style="display:none"><br/>
-		<button type="button" id="openaccessbutton">View Open Access Version</button><br/>
-		<span class="note">Open Access versions may be author drafts.</span>
-	</div>
+  <span class="field">
+    <span class="valid"><strong>DOI</strong></span><br />
+      <span class="note">Have the DOI? Try resolving it to auto populate the form.</span>
+  </span></br>
+  <input id="DOI" name="DOI" type="text" size="20" class="f-name" tabindex="1" value="">
+  <button type="button" id="doibutton" onclick="resolveDOI()">Resolve DOI</button><br />
+  <span class="note" id="doierrormessage"></span>
+  <div id="openaccessdiv" style="display:none"><br/>
+    <button type="button" id="openaccessbutton">View Open Access Version</button><br/>
+    <span class="note">Open Access versions may be author drafts.</span>
+  </div>
 </label>
 ```
 
