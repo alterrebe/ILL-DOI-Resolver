@@ -28,16 +28,7 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
 </label>
 ```
 
-6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but above the first `<label for=...>`/* DOIResolver.js
-   Author: Austin Smith, University of Maryland Libraries
-  These functions are intended for use with the ILLiad ArticleReqest.html page.
-*/
-
-
-/* Attempt to retrieve the JSON metadata associated with a DOI.
-   If successful, pass the JSON to a function which will populate the form.
-   Otherwise, display an error message.
-*/ line).
+6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but above the first `<label for=...>` line).
 
 ```
 <label for="DOI">
@@ -48,6 +39,9 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
  <input id="DOI" name="DOI" type="text" size="20" class="f-name" tabindex="1" value="">
  <button type="button" id="doibutton" onclick="resolveDOI()">Resolve DOI</button><br />
  <span class="note" id="doierrormessage"></span>
+ <div id="openaccessdiv" style="display:none"><br/>
+  <button type="button" id="openaccessbutton">View Open Access Version</button><br/>
+  <span class="note">Open Access versions may be author drafts.</span>
 </label>
 ```
 
