@@ -44,7 +44,7 @@ function autofillFields(responseText){
   
   if (citation_json.ISSN){
     isxn = citation_json.ISSN[0];
-  } elseif (citation_json.ISBN){
+  } else if (citation_json.ISBN){
     isxn = citation_json.ISBN[0];
   } else {
     isxn = "";
