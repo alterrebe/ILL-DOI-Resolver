@@ -95,13 +95,14 @@ function checkOpenAccess(url){
 
 // If an OA link was found, display it.
 function displayOpenAccessLink(url){
-  link = document.getElementById("openaccesslink");
-  link.href = url;
-  link.innerHTML = "An Open Access version of this article may be available here.";
+   oa = document.getElementById("openaccess");
+   oa.setAttribute("style", "display:none");
+   oab = document.getElementById("openaccessbutton");
+   oab.onclick = function(){ window.open(url,'_blank') }
 }
 
 function hideOpenAccessLink()
-{  link = document.getElementById("openaccesslink");
-  link.href = "";
-  link.innerHTML = "";
+{
+   oa = document.getElementById("openaccess");
+   oa.setAttribute("style", "display:none");
 }
