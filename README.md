@@ -28,21 +28,21 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
 </label>
 ```
 
-6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but above the first `<label for=...>` line).
+6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but just above the first `<label for=...>` line).
 
 ```
 <label for="DOI">
- <span class="field">
-  <span class="valid"><strong>DOI</strong></span><br />
- </span></br>
- <span class="note">Have the DOI? Try resolving it to auto populate the form.</span>
- <input id="DOI" name="DOI" type="text" size="20" class="f-name" tabindex="1" value="">
- <button type="button" id="doibutton" onclick="resolveDOI()">Resolve DOI</button><br />
- <span class="note" id="doierrormessage"></span>
- <div id="openaccessdiv" style="display:none"><br/>
-  <button type="button" id="openaccessbutton">View Open Access Version</button><br/>
-  <span class="note">Open Access versions may be author drafts.</span>
-</div>
+	<span class="field">
+		<span class="valid"><strong>DOI</strong></span><br />
+		<span class="note">Have the DOI? Try resolving it to auto populate the form.</span>
+	</span></br>
+	<input id="DOI" name="DOI" type="text" size="20" class="f-name" tabindex="1" value="">
+	<button type="button" id="doibutton" onclick="resolveDOI()">Resolve DOI</button><br />
+	<span class="note" id="doierrormessage"></span>
+	<div id="openaccessdiv" style="display:none"><br/>
+		<button type="button" id="openaccessbutton">View Open Access Version</button><br/>
+		<span class="note">Open Access versions may be author drafts.</span>
+	</div>
 </label>
 ```
 
