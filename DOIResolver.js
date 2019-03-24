@@ -1,4 +1,13 @@
+/* DOIResolver.js
+   Author: Austin Smith, University of Maryland Libraries
+  These functions are intended for use with the ILLiad ArticleReqest.html page.
+*/
 
+
+/* Attempt to retrieve the JSON metadata associated with a DOI.
+   If successful, pass the JSON to a function which will populate the form.
+   Otherwise, display an error message.
+*/
 function resolveDOI(){
   hideOpenAccessLink();
   
@@ -25,6 +34,7 @@ function resolveDOI(){
   xmlhttp.send();
 }
 
+// Display an error message if no metadata could be retrieved.
 function displayErrorMessage(){
   error_message = document.getElementById("doierrormessage")
   error_message.innerHTML = "<b>There was a problem retrieving metadata for this DOI.</b><br>"
@@ -62,6 +72,7 @@ function autofillFields(responseText){
   document.getElementById("ISSN").value = isxn || null;
 }
 
+// Check openaccessbutton.org for an open access copy.
 function checkOpenAccess(url){
   oa_url = "https://api.openaccessbutton.org/availability?url=" + url
   var xmlhttp = new XMLHttpRequest();
@@ -82,6 +93,7 @@ function checkOpenAccess(url){
   xmlhttp.send();
 }
 
+// If an OA link was found, display it.
 function displayOpenAccessLink(url){
   link = document.getElementById("openaccesslink");
   link.href = url;
