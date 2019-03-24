@@ -42,6 +42,7 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
  <div id="openaccessdiv" style="display:none"><br/>
   <button type="button" id="openaccessbutton">View Open Access Version</button><br/>
   <span class="note">Open Access versions may be author drafts.</span>
+</div>
 </label>
 ```
 
