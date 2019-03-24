@@ -128,7 +128,7 @@ function checkOpenAccess(url){
   xmlhttp.onloadend = function() {
     if (xmlhttp.status == 200) {
       response = JSON.parse(this.responseText)
-      if (response.data.availability) {
+      if (response.data.availability[0]) {
         displayOpenAccessLink(response.data.availability[0].url);
       } else {
           console.log("no open access");
