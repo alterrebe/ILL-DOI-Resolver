@@ -31,7 +31,6 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
 ```
 
 6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but just above the first `<label for=...>` line).
-
 ```
 <label for="DOI">
   <span class="field">
@@ -47,9 +46,8 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
   </div>
 </label>
 ```
-
 7. Now you'll need to go through each of the fields defined on your form and change the tab indexes, so that users will be able to tab through the form in order. Look for the lines with `<input>` tags, and change the `tabindex` values to reflect the new order of the fields. Make sure to enclose the numbers in quotes.
-
+![tabindex screenshot](tabindexscreenshot.png)
 8. Save your changes and try it out! The Resolve DOI button should now be present & functional on your request form.
 
 The code provided here has minimal styling; if you've modified the CSS for your ILLiad web pages, you'll probably want to tweak this to match your existing styles.
