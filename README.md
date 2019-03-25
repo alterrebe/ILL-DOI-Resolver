@@ -29,7 +29,6 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
  <input id="DOI" name="DOI" type="text" size="40" class="f-name" tabindex="7" value=""><br />
 </label>
 ```
-
 6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but just above the first `<label for=...>` line).
 ```
 <label for="DOI">
