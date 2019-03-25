@@ -21,6 +21,7 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
  <script type="text/javascript" src="js/DOIResolver.js"></script>
  ```
 5. Find the code that defines the DOI field on your form. It should look something like this:
+
  ```
  <label for="DOI">
   <span class="field">
@@ -30,6 +31,7 @@ You can try it out at <https://austinfsmith.github.io/ILL-DOI-Resolver/resolver.
  </label>
  ```
 6. You'll probably want to move the DOI field to the top of your request form, so delete those lines and add the following lines at the top of the field set (below the `<fieldset>` line, but just above the first `<label for=...>` line).
+
  ```
  <label for="DOI">
    <span class="field">
