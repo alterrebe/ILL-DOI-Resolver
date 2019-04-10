@@ -61,15 +61,32 @@ function autofillFields(responseText){
   }
     
   
-  document.getElementById("PhotoJournalTitle").value = citation_json["container-title"] || null;
-  document.getElementById("PhotoJournalVolume").value = citation_json.volume || null;
-  document.getElementById("PhotoJournalIssue").value = citation_json.issue || null;
-  document.getElementById("PhotoJournalYear").value = citation_json.issued["date-parts"][0][0] || null;
-  document.getElementById("PhotoJournalMonth").value = citation_json.issued["date-parts"][0][1] || null;
-  document.getElementById("PhotoJournalInclusivePages").value = citation_json.page || null;
-  document.getElementById("PhotoArticleAuthor").value = authors || null;
-  document.getElementById("PhotoArticleTitle").value = citation_json.title || null;
-  document.getElementById("ISSN").value = isxn || null;
+  journal_title_field = document.getElementById("PhotoJournalTitle") || null;
+  volume_field = document.getElementById("PhotoJournalVolume") || null;
+  issue_field = document.getElementById("PhotoJournalIssue") || null;
+  year_field = document.getElementById("PhotoJournalYear") || null;
+  month_field = document.getElementById("PhotoJournalMonth") || null;
+  pages_field = document.getElementById("PhotoJournalInclusivePages") || null;
+  article_author_field = document.getElementById("PhotoArticleAuthor") || null;
+  article_title_field = document.getElementById("PhotoArticleTitle") || null;
+  isxn_field = document.getElementById("ISSN") || null;
+  publisher_field = document.getElementById("PhotoItemPublisher") || null;
+  
+  // still need to find DOI field names for:
+  //PhotoItemAuthor
+  //PhotoItemEdition
+  
+  if (journal_title_field) {journal_title_field .value = citation_json["container-title"] || null;}
+  if (volume_field) {volume_field .value = citation_json.volume || null;}
+  if (issue_field) {issue_field .value = citation_json.issue || null;}
+  if (year_field) {year_field .value = citation_json.issued["date-parts"][0][0] || null;}
+  if (month_field) {month_field .value = citation_json.issued["date-parts"][0][1] || null;}
+  if (pages_field) {pages_field .value = citation_json.page || null;}
+  if (article_author_field) {article_author_field.value = authors || null;}
+  if (article_title_field) {article_title_field.value = citation_json.title || null;}
+  if (isxn_field) {isxn_field.value = isxn || null;}
+  if (publisher_field) {publisher_field.value = citation_json.publisher || null;}
+   
 }
 
 // Check openaccessbutton.org for an open access copy.
