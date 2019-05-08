@@ -57,3 +57,6 @@ The code provided here has minimal styling; if you've modified the CSS for your 
 
 Please let me know if you decide to use this, or if you have any questions for comments!
 
+Austin Smith
+afsmith@umd.edu
+
