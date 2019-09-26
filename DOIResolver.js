@@ -41,6 +41,7 @@ function displayErrorMessage(){
 }
 
 function autofillFields(responseText){
+  console.log(responseText);
   citation_json = JSON.parse(responseText);
   console.log(citation_json);
 
