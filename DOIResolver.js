@@ -14,10 +14,19 @@ function resolveDOI(){
   // perform some basic cleanup on the DOI - 
   // use https, remove spaces, ensure the correct url is used, 
   // remove a trailing period if there is one.
+  // strip a possible URL prefix, remove spaces and trailing periods
   var doi = document.getElementById('DOI').value;
-  doi = doi.replace("http:","https:").replace(" ","").replace("dx.doi.org","doi.org");
-  if (doi.substr(-1) == "."){ doi = doi.substr(0, doi.length - 1); }
-  var doi_url = (doi.includes("https://doi.org/")) ? doi : "https://doi.org/" + doi;
+  doi = doi.replace(/^https?:\/\/[^\/]+\//, "").replace(" ","").replace(/\.+$/g, "");
+  console.log("DOI = " + doi);
+
+  // basic verification of the DOI format:
+  // it should start from a group of at least three digits, possibly with periods and dashes as separators:
+  if (doi.replace(/-|\./g, "").match(/^[0-9]{3,}/) == null) {
+    displayErrorMessage("This DOI does not look correct.");
+    return;
+  }
+
+  var doi_url = "https://doi.org/" + doi;
 
   // create an http request, specifying that a JSON response is desired.
   var xmlhttp = new XMLHttpRequest();
@@ -26,7 +35,7 @@ function resolveDOI(){
       autofillFields(this.responseText);
       checkOpenAccess(doi_url);
     } else if (xmlhttp.status == 404) {
-      displayErrorMessage();
+      displayErrorMessage("There was a problem retrieving metadata for this DOI.");
     }
   };
   xmlhttp.open("GET", doi_url, true);
@@ -34,10 +43,10 @@ function resolveDOI(){
   xmlhttp.send();
 }
 
-// Display an error message if no metadata could be retrieved.
-function displayErrorMessage(){
-  error_message = document.getElementById("doierrormessage")
-  error_message.innerHTML = "<b>There was a problem retrieving metadata for this DOI.</b><br>"
+// Display a given error message
+function displayErrorMessage(errMessage){
+  error_message = document.getElementById("doierrormessage");
+  error_message.innerHTML = `${errMessage}<br>`;
 }
 
 function autofillFields(responseText){
